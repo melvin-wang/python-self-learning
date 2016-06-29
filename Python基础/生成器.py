@@ -37,14 +37,16 @@ def odd():
 for n in odd():
     print(n)
 
-
 import time
-#无限序列
+
+
+# 无限序列
 def infiniteG():
     i = 0
     while True:
         yield i
         i += 1
+
 
 # for n in infiniteG():
 #     print(n, time.time())
@@ -60,11 +62,31 @@ def triangles():
 
         R = []
         R.append(1)
-        for x in range(1, n-1):
-            R.append(L[x-1] + L[x])
+        for x in range(1, n - 1):
+            R.append(L[x - 1] + L[x])
         R.append(1)
         L = R
 
-for i in triangles():
-     print(i)
-     time.sleep(1)
+
+# for i in triangles():
+#      print(i)
+#      time.sleep(1)
+
+var = [x * x for x in range(1, 11) if x % 2 == 0]
+print(var)
+
+var = [m + n for m in 'ABC' for n in 'XYZ']
+print(var)
+
+import os
+
+var = [d for d in os.listdir('..')]
+print(var)
+
+d = {'x': 'A', 'y': 'B', 'z': 'C'}
+var = [k + '=' + v for k, v in d.items()]
+print(var)
+
+L = ['Hello', 'World', 18, 'Apple', None]
+var = [s.lower() for s in L if isinstance(s, str)]
+print(var)
